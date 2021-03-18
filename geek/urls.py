@@ -31,4 +31,5 @@ urlpatterns = [
     path('api/events/', events_views.EventAPIView.as_view()),
     path('api/events/<int:id>/', events_views.EventDetailAPIView.as_view()),
     path('api/user/<int:pk>/', user_views.UserRetrieveUpdateDeleteAPIView.as_view(), name='user'),
+    path('api/request/', user_views.RequestAPIView.as_view()),
 ]

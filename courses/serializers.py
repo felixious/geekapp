@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from courses.models import Course, Level, Lesson
 from users.serializers import UserListSerializer
 
