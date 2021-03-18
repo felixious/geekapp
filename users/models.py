@@ -4,6 +4,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
+
 from .manager import UserManager
 
 
@@ -36,6 +37,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True, verbose_name='Is active')
     phone_number = models.CharField(max_length=200, blank=True, null=True, verbose_name='Phone number')
     birthday = models.DateField(max_length=20, blank=True, null=True, verbose_name='Birthday')
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
